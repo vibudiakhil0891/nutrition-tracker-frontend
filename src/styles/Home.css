@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 80px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(17, 24, 39, 0.8);
+
+    backdrop-filter: blur(12px);
+
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-links li:hover {
+    color: #22c55e;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 90vh;
+
+    padding: 80px;
+
+    background:
+        linear-gradient(135deg,
+            #0f172a,
+            #1e293b);
+
+    color: white;
+}
+
+.hero-left h1 {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+
+
+.hero-left p {
+    font-size: 22px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.hero-btn {
+    padding: 16px 35px;
+
+    background: #22c55e;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 14px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(34,
+            197,
+            94,
+            0.4);
+}
+
+.hero-right img {
+    width: 550px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(0,
+            0,
+            0,
+            0.25);
+
+    transition: 0.4s;
+}
+
+.hero-right img {
+    width: 550px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(0,
+            0,
+            0,
+            0.25);
+
+    transition: 0.4s;
+}
+
+.hero-right img:hover {
+    transform: scale(1.03);
+}
+
+.features {
+    padding: 100px 80px;
+
+    background:
+        linear-gradient(to bottom,
+            #f8fafc,
+            #e2e8f0);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    padding: 35px;
+
+    border-radius: 24px;
+
+    background:
+        rgba(255,
+            255,
+            255,
+            0.8);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 35px rgba(0,
+            0,
+            0,
+            0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 25px 45px rgba(0,
+            0,
+            0,
+            0.12);
+}
+
+.footer {
+    background: #0f172a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px;
+
+    font-size: 18px;
+}
