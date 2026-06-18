@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://nutrition-tracker-backend-zpws.onrender.com/api";
+const API_URL = "https://nutrition-tracker-backend-zpws.onrender.com/api";
 
 export const registerUser = async (userData) => {
     return await axios.post(

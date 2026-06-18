@@ -8,13 +8,13 @@ function FoodTracker() {
     const [total, setTotal] = useState(0);
 
     const fetchFoods = async () => {
-        const res = await axios.get("http://nutrition-tracker-backend-zpws.onrender.com/api/food/today/");
+        const res = await axios.get("https://nutrition-tracker-backend-zpws.onrender.com/api/food/today/");
         setFoods(res.data.foods);
         setTotal(res.data.total_calories);
     };
 
     const addFood = async () => {
-        await axios.post("http://nutrition-tracker-backend-zpws.onrender.com/api/food/add/", {
+        await axios.post("https://nutrition-tracker-backend-zpws.onrender.com/api/food/add/", {
             food_name: foodName,
             calories: calories,
         });
