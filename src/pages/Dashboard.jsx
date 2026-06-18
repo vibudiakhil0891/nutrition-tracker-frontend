@@ -48,7 +48,7 @@ function Dashboard() {
         try {
 
             const res = await axios.get(
-                "http://127.0.0.1:8000/api/profile/",
+                "https://nutrition-tracker-backend-zpws.onrender.com/api/profile/",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ function Dashboard() {
     const saveWeight = async () => {
         try {
             await axios.post(
-                "http://127.0.0.1:8000/api/weight/save/",
+                "https://nutrition-tracker-backend-zpws.onrender.com/api/weight/save/",
                 {
                     weight: currentWeight,
                 },
@@ -93,7 +93,7 @@ function Dashboard() {
     const loadWeightHistory = async () => {
         try {
             const res = await axios.get(
-                "http://127.0.0.1:8000/api/weight/history/",
+                "https://nutrition-tracker-backend-zpws.onrender.com/api/weight/history/",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -116,7 +116,7 @@ function Dashboard() {
     // API CALLS
     const calculateCalories = async () => {
         const res = await axios.post(
-            "http://127.0.0.1:8000/api/calculate/",
+            "https://nutrition-tracker-backend-zpws.onrender.com/api/calculate/",
             { age, weight, height },
             { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -125,7 +125,7 @@ function Dashboard() {
 
     const calculateBMI = async () => {
         const res = await axios.post(
-            "http://127.0.0.1:8000/api/bmi/",
+            "https://nutrition-tracker-backend-zpws.onrender.com/api/bmi/",
             { weight, height }
         );
         setBmi(res.data.bmi);
@@ -134,7 +134,7 @@ function Dashboard() {
 
     const calculateMacros = async () => {
         const res = await axios.post(
-            "http://127.0.0.1:8000/api/macros/",
+            "https://nutrition-tracker-backend-zpws.onrender.com/api/macros/",
             { weight, calories: result },
             { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -143,7 +143,7 @@ function Dashboard() {
 
     const generateAIDiet = async () => {
         const res = await axios.post(
-            "http://127.0.0.1:8000/api/ai-diet/",
+            "https://nutrition-tracker-backend-zpws.onrender.com/api/ai-diet/",
             { goal, weight, veg },
             { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -157,7 +157,7 @@ function Dashboard() {
         setChat((prev) => [...prev, userMsg]);
 
         const res = await axios.post(
-            "http://127.0.0.1:8000/api/chat/",
+            "https://nutrition-tracker-backend-zpws.onrender.com/api/chat/",
             { message, weight, goal }
         );
 

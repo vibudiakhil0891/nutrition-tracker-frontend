@@ -16,12 +16,17 @@ function AIFood() {
             const token = localStorage.getItem("access_token");
 
             const res = await axios.post(
-                "http://127.0.0.1:8000/api/ai/food/",
+                "https://nutrition-tracker-backend-zpws.onrender.com/api/ai/food/",
                 {
                     goal,
                     veg,
                     calories
                 },
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                }
 
             );
 

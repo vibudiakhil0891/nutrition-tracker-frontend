@@ -9,7 +9,7 @@ function Calculator() {
 
     const calculate = async () => {
         const response = await axios.post(
-            "http://127.0.0.1:8000/api/calculate/",
+            "https://nutrition-tracker-backend-zpws.onrender.com/api/calculate/",
             {
                 age,
                 weight,

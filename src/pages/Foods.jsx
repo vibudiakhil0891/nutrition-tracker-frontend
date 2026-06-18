@@ -7,7 +7,7 @@ function Foods() {
 
     const searchFood = async () => {
         const res = await axios.get(
-            `http://127.0.0.1:8000/api/food/search/?q=${query}`
+            `https://nutrition-tracker-backend-zpws.onrender.com/api/food/search/?q=${query}`
         );
 
         setResults(res.data);
